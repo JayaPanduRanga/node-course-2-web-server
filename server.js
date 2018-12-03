@@ -50,6 +50,12 @@ app.get('/about', (request, response) => {
     // response.send('About has been sent');
 });
 
+app.get('/projects', (request, response) =>{
+    response.render('projects.hbs',{
+        pageTitle: 'Projects Page'
+    });
+});
+
 app.get('/bad', (request, response) => {
     response.send({
         errormessage: 'This is a bad request.'
